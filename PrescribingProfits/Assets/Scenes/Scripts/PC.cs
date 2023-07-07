@@ -5,7 +5,7 @@ using UnityEngine;
 public class PC : MonoBehaviour, IInteractable
 {
     public GameObject screen;
-    public bool canLeave = false;
+    public static bool canLeave = false;
 
     public void Interact()
     {
