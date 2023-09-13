@@ -18,7 +18,7 @@ public class Door : MonoBehaviour, IInteractable
             }
             else
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("HomeDayOne");
             }
         }
         else

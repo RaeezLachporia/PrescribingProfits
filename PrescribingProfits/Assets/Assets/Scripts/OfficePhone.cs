@@ -9,6 +9,7 @@ public class OfficePhone : MonoBehaviour, IInteractable
 
     public bool bossCalled = false;
     public GameObject Dialog;
+    public GameObject ringer;
     [SerializeField] TextMeshProUGUI bossDialog;
     int dialogPage = 0;
     public SFX sfx;
@@ -16,6 +17,8 @@ public class OfficePhone : MonoBehaviour, IInteractable
     public void Interact()
     {
         Debug.Log("Phone");
+
+        Destroy(ringer);
 
         if(bossCalled == false)
         {
@@ -42,7 +45,7 @@ public class OfficePhone : MonoBehaviour, IInteractable
                     break;
 
                 case 3:
-                    bossDialog.text = "This is because they have realised they can sell life savong medicine for a large profit";
+                    bossDialog.text = "This is because they have realised they can sell life saving medicine for a large profit";
                     sfx.PlaySound("VoiceThree");
                     break;
 
