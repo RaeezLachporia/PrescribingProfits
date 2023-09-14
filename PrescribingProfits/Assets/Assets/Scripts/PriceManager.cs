@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PriceManager : MonoBehaviour
 {
-    int insulPrice = 69;
-    int furoPrice = 32;
-    int sertraPrice = 55;
-    GameObject isulField;
+    public int insulPrice = 69;
+    public int furoPrice = 32;
+    public int sertraPrice = 55;
+    [SerializeField] TextMeshProUGUI insulDisplay;
+    [SerializeField] TextMeshProUGUI furoDisplay;
+    [SerializeField] TextMeshProUGUI sertraDisplay;
     public PC pc;
 
     public bool doneWork;
@@ -18,7 +21,9 @@ public class PriceManager : MonoBehaviour
 
     void Start()
     {
-        
+        insulDisplay.text = "$ " + insulPrice.ToString();
+        furoDisplay.text = "$ " + insulPrice.ToString();
+        sertraDisplay.text = "$ " + insulPrice.ToString();
     }
 
     void Update()
