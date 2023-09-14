@@ -18,7 +18,7 @@ public class OfficePhone : MonoBehaviour, IInteractable
     {
         Debug.Log("Phone");
 
-        Destroy(ringer);
+        ringer.SetActive(false);
 
         if(bossCalled == false)
         {
@@ -61,7 +61,7 @@ public class OfficePhone : MonoBehaviour, IInteractable
 
                 case 6:
                     bossDialog.text = "Start with insulin";
-                    sfx.PlaySound("VoiceFive");
+                    sfx.PlaySound("VoiceSix");
                     break;
 
                 case 7:

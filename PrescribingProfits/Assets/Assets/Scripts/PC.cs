@@ -7,6 +7,7 @@ public class PC : MonoBehaviour, IInteractable
    
     public GameObject screen;
     public static bool canLeave = false;
+    public bool pcOpen = false;
 
     public void Interact()
     {
@@ -15,6 +16,7 @@ public class PC : MonoBehaviour, IInteractable
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+        pcOpen = true;
         canLeave = true;
     }
     
@@ -25,6 +27,8 @@ public class PC : MonoBehaviour, IInteractable
             screen.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            pcOpen = false;
         }        
     }
     
