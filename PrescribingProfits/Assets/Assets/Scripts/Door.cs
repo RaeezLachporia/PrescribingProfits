@@ -6,26 +6,31 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour, IInteractable
 {
     public GameObject backToWork;
-    public GameObject congradulation;
+    private PriceManager pm;
 
     public void Interact()
     {
-        if (PC.canLeave == true)
+
+        if (SceneManager.GetActiveScene().name == "OfficeDayOne")
         {
-            if (SceneManager.GetActiveScene().buildIndex == 4)
-            {
-                congradulation.SetActive(true);
-            }
-            else
+            if (pm.doneWork == true)
             {
                 SceneManager.LoadScene("HomeDayOne");
             }
+            else
+            {
+                backToWork.SetActive(true);
+            }
         }
-        else
+        else if (SceneManager.GetActiveScene().name == "HomeDayOne")
         {
-            Debug.Log("PC");
-            backToWork.SetActive(true);
+                backToWork.SetActive(true);
         }
+        else if (SceneManager.GetActiveScene().name == "HomeDayTwoMoring")
+        {
+            SceneManager.LoadScene("OfficeBlockDayTwo");
+        }
+
     }
 
     void Update()

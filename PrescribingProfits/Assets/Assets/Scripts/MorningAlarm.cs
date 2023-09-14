@@ -12,7 +12,7 @@ public class MorningAlarm : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(Alarm);
+            Alarm.SetActive(false);
             ScreenAlarm.SetActive(false);
             Screen.SetActive(true);
         }
