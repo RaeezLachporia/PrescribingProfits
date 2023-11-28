@@ -23,16 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Scenes/OfficeBlockDayThree.unity
     guid: bf5fc9ed8c3705a48aec7558ac439d83
-  - enabled: 1
-    path: Assets/Assets/Scenes/OfficeBlockDayTwo.unity
+  - enabled: 0
+    path: Assets/Scenes/Scenes/OfficeBlockDayTwo.unity
     guid: 6495934944e678240a8637fc9089dac0
-  - enabled: 1
-    path: Assets/Assets/Scenes/OfficeBlockDayThree.unity
+  - enabled: 0
+    path: Assets/Scenes/Scenes/OfficeBlockDayThree.unity
     guid: 37db38c4625c3f243ab43bfcf5bcd01a
   - enabled: 1
     path: Assets/Assets/Scenes/HomeDayTwo.unity
     guid: 79c9ffbb3370906499a8c2a5f40d467f
-  - enabled: 1
-    path: Assets/Assets/Scenes/HomeDayTwo_Morning.unity
-    guid: 734c3e8254f56fb439b3b36c553874ae
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
